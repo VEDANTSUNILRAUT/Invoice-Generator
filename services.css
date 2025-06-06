@@ -1,0 +1,328 @@
+/* Base Styles */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-dark-bg);
+  color: var(--color-white);
+  line-height: 1.6;
+}
+
+:root {
+  --color-black: #000000;
+  --color-dark-bg: #111111;
+  --color-darker-bg: #0a0a0a;
+  --color-white: #ffffff;
+  --color-light-gray: #cccccc;
+  --color-gray: #888888;
+  --color-border: #00ffaa33;
+  --color-primary: #00ffaa;
+  --color-primary-light: #00e676;
+  --color-primary-dark: #00c853;
+  --color-shadow-primary: rgba(0, 255, 170, 0.2);
+  --color-shadow-light: rgba(255, 255, 255, 0.1);
+}
+
+/* Header */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* header */
+
+header {
+  background: var(--color-black);
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 15px var(--color-shadow-light);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.4rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo-text {
+  color: var(--color-white);
+}
+
+.logo svg path {
+  fill: var(--color-white);
+  filter: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: var(--color-light-gray);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--color-white);
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--color-white);
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Auth Buttons */
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.login-btn,
+.signup-btn {
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 24px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.login-btn {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.login-btn:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+  box-shadow: 0 0 8px var(--color-shadow-light);
+}
+
+.signup-btn {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.signup-btn:hover {
+  background: var(--color-lighter-gray);
+  box-shadow: 0 0 12px var(--color-shadow-light);
+}
+
+.hero {
+  height: 52vh;
+  position: relative;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: url("./img/services-hero.jpg") no-repeat center center/cover;
+  color: var(--color-white);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--color-light-gray);
+}
+
+.hero .cta-button {
+  margin-top: 1.5rem;
+  background: var(--color-primary);
+  color: var(--color-black);
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  box-shadow: 0 4px 12px var(--color-shadow-primary);
+}
+
+.hero .cta-button:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-3px);
+}
+
+/* Services */
+.services {
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-box {
+  background: var(--color-darker-bg);
+  border: 1px solid var(--color-border);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--color-shadow-primary);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px var(--color-shadow-primary);
+}
+
+.service-box h2 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.service-box p {
+  color: var(--color-light-gray);
+  font-size: 0.95rem;
+}
+
+.service-box.future {
+  border-color: var(--color-primary-light);
+  opacity: 0.95;
+}
+/* footer */
+.site-footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: 75px auto;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #00ffaa;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #00ffaa;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #888;
+}
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* Make icons white */
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+  filter: brightness(0) invert(57%) sepia(100%) saturate(1000%)
+    hue-rotate(90deg); /* Neon green tint */
+}
+.social-icons {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.social-icons a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}

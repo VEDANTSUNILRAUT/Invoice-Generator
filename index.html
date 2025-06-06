@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <!-- Left: Logo -->
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 21 19" fill="white" xmlns="http://www.w3.org/2000/svg"
+                    style="margin-right: 8px;">
+                    <path
+                        d="M20.5257 0.366943L9.18097 10.1489L8.86262 10.3805L8.70634 10.4673L8.60794 10.502L8.49218 10.5425L8.4343 10.5599L8.36484 10.5715L8.27802 10.5772H8.11595H7.91915L7.82075 10.5715L7.73393 10.5599L7.6529 10.5425L7.58923 10.5252L0.730264 7.89154L0.579773 7.85681L0.504526 7.87997L0.429281 7.95521L0.406128 8.00731V8.07676L0.429281 8.18674L0.730264 8.57455L7.78602 18.3392L7.86127 18.4028L7.95388 18.4781L8.09858 18.5186L8.2375 18.5244L8.3822 18.4897L8.50954 18.4144L8.60794 18.3218L8.74107 18.1771L20.6589 0.505859V0.436401L20.6241 0.366943H20.5257Z" />
+                </svg>
+                <span class="logo-text">Invoice Simple</span>
+            </div>
+
+            <!-- Center: Navbar -->
+            <nav class="navbar">
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./services.html">Services</a>
+                <a href="./contact.html">Contact</a>
+            </nav>
+
+            <!-- Right: Login/Signup -->
+            <div class="auth-buttons">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="home">
+        <!-- 1. Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Simple Invoice Generator</h1>
+                    <p>Made for humans, built for ease — your invoices, done right.</p>
+                    <a href="./invoice.php" class="cta-btn">Generate Invoice</a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+        <!-- 2. Features Section -->
+        <section class="features" id="features">
+            <h2 class="features-heading">Why Use Invoice Simple?</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Customize Icon">
+                    <h3>Customizable Layout</h3>
+                    <p>Personalize your invoices — from logos to line items — with ease and style.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/709/709496.png" alt="Preview Icon">
+                    <h3>Real-time Preview</h3>
+                    <p>Preview your invoice live before saving or sending. No surprises, only clarity.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email Icon">
+                    <h3>One-click Send</h3>
+                    <p>Email your invoice instantly from your browser — no downloads needed.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 3. How It Works -->
+        <section class="how-it-works-timeline">
+            <h2>How It Works</h2>
+            <div class="how-it-works-container">
+                <!-- Timeline Column -->
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Business Details">
+                            <h3>Step 1: Add Your Details</h3>
+                            <p>Fill in your business name, client info, and branding elements like logo and contact.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828911.png" alt="Line Items">
+                            <h3>Step 2: Add Line Items</h3>
+                            <p>Include product or service details, quantities, rates, and taxes. The math is handled for
+                                you.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <img src="https://cdn-icons-png.flaticon.com/512/726/726476.png" alt="Preview and Send">
+                            <h3>Step 3: Preview & Send</h3>
+                            <p>Check your invoice, then download it or email it instantly — all in just one click.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="timeline-image">
+                    <img src="./img/laptop .png" alt="How It Works Visual">
+                </div>
+            </div>
+            <video src="./img/working.mp4" autoplay loop muted playsinline class="work-video"></video>
+        </section>
+
+
+        <section class="why-us-carousel">
+            <h2>Why Choose Invoice Simple?</h2>
+            <div class="carousel-marquee">
+                <div class="carousel-track">
+                    <div class="carousel-card">
+                        <h3>🚀 No Login Needed</h3>
+                        <p>Start invoicing instantly — no accounts, no setup.</p>
+                    </div>
+                    <div class="carousel-card">
+                        <h3>💸 Totally Free</h3>
+                        <p>Use all features without ever paying. Seriously.</p>
+                    </div>
+                    <div class="carousel-card">
+                        <h3>📟 Professional Finish</h3>
+                        <p>Your invoices always look polished and client-ready.</p>
+                    </div>
+                    <div class="carousel-card">
+                        <h3>📱 Mobile Friendly</h3>
+                        <p>Use it on your phone, tablet, or desktop without hassle.</p>
+                    </div>
+                    <div class="carousel-card">
+                        <h3>⏱ Fast & Lightweight</h3>
+                        <p>Loads quickly and gets out of your way. Less wait, more work.</p>
+                    </div>
+                    <!-- Repeat for looping effect -->
+                    <div class="carousel-card">
+                        <h3>🚀 No Login Needed</h3>
+                        <p>Start invoicing instantly — no accounts, no setup.</p>
+                    </div>
+                    <div class="carousel-card">
+                        <h3>💸 Totally Free</h3>
+                        <p>Use all features without ever paying. Seriously.</p>
+                    </div>
+                    <div class="carousel-card">
+                        <h3>📟 Professional Finish</h3>
+                        <p>Your invoices always look polished and client-ready.</p>
+                    </div>
+                    <div class="carousel-card">
+                        <h3>📱 Mobile Friendly</h3>
+                        <p>Use it on your phone, tablet, or desktop without hassle.</p>
+                    </div>
+                    <div class="carousel-card">
+                        <h3>⏱ Fast & Lightweight</h3>
+                        <p>Loads quickly and gets out of your way. Less wait, more work.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="cta-banner" id="cta-banner">
+        <div class="cta-content">
+            <p class="tagline">💡 Simple. Fast. Reliable.</p>
+            <h2>Generate Your Invoice<br> for Anything</h2>
+            <a href="invoice.php" class="cta-button">Create Invoice Now</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- Section 1: About -->
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Invoice Simple helps freelancers and small businesses create professional invoices easily. Trusted by
+                    thousands worldwide.</p>
+            </div>
+
+            <!-- Section 2: Quick Links -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#cta-banner">service</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 3: Support -->
+            <div class="footer-section support">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 4: Contact Info -->
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>📍 Amravati, Maharashtra, India</p>
+                <p>📞 +91 98765 43210</p>
+                <p>✉️ support@invoicesimple.com</p>
+
+                <div class="social-icons">
+                    <a href="#" target="_blank" title="YouTube">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384062.png" alt="linkdin">
+                    </a>
+                    <a href="#" target="_blank" title="Instagram">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
+                    </a>
+                    <a href="#" target="_blank" title="Twitter">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384017.png" alt="Twitter">
+                    </a>
+                    <a href="#" target="_blank" title="Facebook">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>© 2025 Invoice Simple. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
