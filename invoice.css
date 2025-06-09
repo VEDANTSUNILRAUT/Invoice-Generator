@@ -648,11 +648,11 @@ select[name="invoice_terms"]:focus {
   text-align: center;
   line-height: 1.25rem;
   height: 35px;
-  width: 35px;
-  border: 1px solid #9da3ae; /* light gray */
+  width: 60px;
+  border: 1px solid #9da3ae;
   border-radius: 4px;
   padding: 0px 20px;
-  margin: 0px 10px 0px 0px;
+  margin: 0px 25px 0px 0px;
 }
 .five-amt {
   display: flex;
@@ -663,8 +663,20 @@ select[name="invoice_terms"]:focus {
   height: 35px;
   width: 35px;
   padding: 0px 20px;
-  margin: 0px 25px 0px 0px;
+  margin: 0px 0px 0px 15px;
 }
+/* Remove arrows in Chrome, Safari, Edge, Opera */
+.five-qnt::-webkit-inner-spin-button,
+.five-qnt::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows in Firefox */
+.five-qnt {
+  -moz-appearance: textfield;
+}
+
 /* -----lb-five-second----------- */
 .lb-five-second {
   display: flex;

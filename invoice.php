@@ -232,7 +232,8 @@ if (isset($_FILES["photo"]) && $_FILES["photo"]["error"] === UPLOAD_ERR_OK) {
                                         <button type="button" class="five-cross"><strong>X</strong></button>
                                         <input type="text" name="item_description[]" placeholder="Item Description" class="five-desc">
                                         <input type="number" name=" item_rate[]" placeholder="0.00" class="five-rate">
-                                        <input type="number" step="1" name="item_qty[]" placeholder="1" class="five-qnt">
+                                        <input type="number" step="1" name="item_qty[]" placeholder="1" class="five-qnt" value="1">
+
 
                                         <div class="five-amt">₹0.00</div>
                                     </div>
