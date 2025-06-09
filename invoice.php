@@ -36,40 +36,37 @@ if (isset($_FILES["photo"]) && $_FILES["photo"]["error"] === UPLOAD_ERR_OK) {
     <title>Invoice Form</title>
     <link rel="stylesheet" href="invoice.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 
 </head>
 
 <body>
-    <form action="preview.php" method="POST" enctype="multipart/form-data">
-        <div class="header-container">
-            <header class="navbar">
-                <div class="navbar-left">
-                    <div class="logo">
-                        <div class="logo">
-                            <svg width="20" height="20" viewBox="0 0 21 19" fill="white" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
-                                <path d="M20.5257 0.366943L9.18097 10.1489L8.86262 10.3805L8.70634 10.4673L8.60794 10.502L8.49218 10.5425L8.4343 10.5599L8.36484 10.5715L8.27802 10.5772H8.11595H7.91915L7.82075 10.5715L7.73393 10.5599L7.6529 10.5425L7.58923 10.5252L0.730264 7.89154L0.579773 7.85681L0.504526 7.87997L0.429281 7.95521L0.406128 8.00731V8.07676L0.429281 8.18674L0.730264 8.57455L7.78602 18.3392L7.86127 18.4028L7.95388 18.4781L8.09858 18.5186L8.2375 18.5244L8.3822 18.4897L8.50954 18.4144L8.60794 18.3218L8.74107 18.1771L20.6589 0.505859V0.436401L20.6241 0.366943H20.5257Z" />
-                            </svg>
-                            <span class="brand">Invoice Simple</span>
-                        </div>
+    <header>
+        <div class="container">
+            <div class="header-container">
+                <a href="index.html" class="logo">
+                    <svg width="24" height="24" viewBox="0 0 21 19" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.5257 0.366943L9.18097 10.1489L8.86262 10.3805L8.70634 10.4673L8.60794 10.502L8.49218 10.5425L8.43430 10.5599L8.36484 10.5715L8.27802 10.5772H8.11595H7.91915L7.82075 10.5715L7.73393 10.5599L7.65290 10.5425L7.58923 10.5252L0.730264 7.89154L0.579773 7.85681L0.504526 7.87997L0.429281 7.95521L0.406128 8.00731V8.07676L0.429281 8.18674L0.730264 8.57455L7.78602 18.3392L7.86127 18.4028L7.95388 18.4781L8.09858 18.5186L8.23750 18.5244L8.38220 18.4897L8.50954 18.4144L8.60794 18.3218L8.74107 18.1771L20.6589 0.505859V0.436401L20.6241 0.366943H20.5257Z" />
+                    </svg>
+                    <span class="logo-text">Invoice Simple</span>
+                </a>
 
-                    </div>
-                    <nav class="nav-links">
-                        <a href="#" class="active">Invoices</a>
-                        <a href="#">Estimates</a>
-                        <a href="#">Expenses</a>
-                        <a href="#">Reports</a>
-                        <a href="#">More <span class="arrow">▾</span></a>
-                    </nav>
+                <nav class="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </nav>
+
+                <div class="auth-buttons">
+                    <a href="#" class="login-btn">Login</a>
+                    <a href="#" class="signup-btn">Sign Up</a>
                 </div>
-                <div class="navbar-right">
-                    <a href="#">Settings</a>
-                    <a href="#">Login</a>
-                    <a href="#">Sign Up</a>
-                    <button class="upgrade-btn">Upgrade Now</button>
-                </div>
-            </header>
+            </div>
         </div>
+    </header>
+    <form action="preview.php" method="POST" enctype="multipart/form-data">
         <div class="main-container">
             <div class="main-body">
                 <div class="left">
@@ -478,67 +475,60 @@ if (isset($_FILES["photo"]) && $_FILES["photo"]["error"] === UPLOAD_ERR_OK) {
     <script src="script.js"></script>
 </body>
 
-<footer class="site-footer">
-    <div class="footer-container">
+<footer>
+    <div class="container">
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <p>Invoice Simple helps freelancers and small businesses create professional invoices easily. Trusted by thousands worldwide.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
 
-        <!-- Section 1: About -->
-        <div class="footer-section about">
-            <h3>About Us</h3>
-            <p>Invoice Simple helps freelancers and small businesses create professional invoices easily. Trusted by
-                thousands worldwide.</p>
-        </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
 
-        <!-- Section 2: Quick Links -->
-        <div class="footer-section links">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./index.html#features">Features</a></li>
-                <li><a href="./services.html">service</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-            </ul>
-        </div>
+            <div class="footer-section support">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
 
-        <!-- Section 3: Support -->
-        <div class="footer-section support">
-            <h3>Support</h3>
-            <ul>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
-        </div>
-
-        <!-- Section 4: Contact Info -->
-        <div class="footer-section contact">
-            <h3>Contact Us</h3>
-            <p>📍 Amravati, Maharashtra, India</p>
-            <p>📞 +91 98765 43210</p>
-            <p>✉️ support@invoicesimple.com</p>
-
-            <div class="social-icons">
-                <a href="#" target="_blank" title="YouTube">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384062.png" alt="linkdin">
-                </a>
-                <a href="#" target="_blank" title="Instagram">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png" alt="Instagram">
-                </a>
-                <a href="#" target="_blank" title="Twitter">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384017.png" alt="Twitter">
-                </a>
-                <a href="#" target="_blank" title="Facebook">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook">
-                </a>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <div class="contact-info-footer">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Amravati, Maharashtra, India</span>
+                </div>
+                <div class="contact-info-footer">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 98765 43210</span>
+                </div>
+                <div class="contact-info-footer">
+                    <i class="fas fa-envelope"></i>
+                    <span>support@invoicesimple.com</span>
+                </div>
             </div>
         </div>
 
-
-    </div>
-
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-        <p>© 2025 Invoice Simple. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Invoice Simple. All rights reserved.</p>
+        </div>
     </div>
 </footer>
 
