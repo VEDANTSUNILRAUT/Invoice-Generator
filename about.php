@@ -778,11 +778,11 @@
                 </a>
 
                 <nav class="navbar">
-                    <a href="index.html">Home</a>
-                    <a href="about.html" class="active">About</a>
-                    <a href="#features">Features</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#contact">Contact</a>
+                    <a href="./index.php">Home</a>
+                    <a href="./about.php">About</a>
+                    <a href="./working.php">How It Works</a>
+                    <a href="./service.php">services</a>
+                    <a href="./contact.php">Contact</a>
                 </nav>
 
                 <div class="auth-buttons">
@@ -1054,12 +1054,13 @@
     </section>
 
     <!-- Footer (same as home page) -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="footer-container">
                 <div class="footer-section about">
                     <h3>About Us</h3>
-                    <p>Invoice Simple helps freelancers and small businesses create professional invoices easily. Trusted by thousands worldwide.</p>
+                    <p>Invoice Simple helps freelancers and small businesses create professional invoices easily.
+                        Trusted by thousands worldwide.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1071,21 +1072,21 @@
                 <div class="footer-section links">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="./index.php">Home</a></li>
+                        <li><a href="./about.php">about</a></li>
+                        <li><a href="./working.php">How It Works</a></li>
+                        <li><a href="./service.php">Services</a></li>
+                        <li><a href="./contact.php">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-section support">
                     <h3>Support</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="./support//help-center.php">Help Center</a></li>
+                        <li><a href="./support//faqs.php">FAQs</a></li>
+                        <li><a href="./support//terms-of-services.php">Terms of Service</a></li>
+                        <li><a href="./support//privacy-policy.php">Privacy Policy</a></li>
                     </ul>
                 </div>
 
@@ -1111,6 +1112,7 @@
             </div>
         </div>
     </footer>
+
 
     <script>
         // Smooth scrolling for anchor links

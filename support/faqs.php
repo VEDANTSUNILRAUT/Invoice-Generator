@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invoice Simple | Professional Invoice Generator</title>
+    <title>FAQs | Invoice Simple</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -840,6 +840,149 @@
                 justify-content: center;
             }
         }
+
+        /* New styles for FAQs */
+        .faqs-page {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .faqs-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faqs-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .faqs-title h1 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .faqs-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto 50px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .search-box i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray);
+        }
+
+        .faq-category {
+            margin-bottom: 60px;
+        }
+
+        .faq-category h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(67, 97, 238, 0.1);
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 25px;
+        }
+
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 15px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question i {
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            color: var(--gray);
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        .contact-faq {
+            background: linear-gradient(135deg, #f0f5ff 0%, #e6f0ff 100%);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact-faq h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .contact-faq p {
+            color: var(--gray);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 30px;
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.3);
+        }
+
+        .contact-btn i {
+            margin-right: 10px;
+        }
     </style>
 </head>
 
@@ -848,7 +991,7 @@
     <header>
         <div class="container">
             <div class="header-container">
-                <a href="#" class="logo">
+                <a href="index.php" class="logo">
                     <svg width="24" height="24" viewBox="0 0 21 19" fill="white" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M20.5257 0.366943L9.18097 10.1489L8.86262 10.3805L8.70634 10.4673L8.60794 10.502L8.49218 10.5425L8.4343 10.5599L8.36484 10.5715L8.27802 10.5772H8.11595H7.91915L7.82075 10.5715L7.73393 10.5599L7.6529 10.5425L7.58923 10.5252L0.730264 7.89154L0.579773 7.85681L0.504526 7.87997L0.429281 7.95521L0.406128 8.00731V8.07676L0.429281 8.18674L0.730264 8.57455L7.78602 18.3392L7.86127 18.4028L7.95388 18.4781L8.09858 18.5186L8.2375 18.5244L8.3822 18.4897L8.50954 18.4144L8.60794 18.3218L8.74107 18.1771L20.6589 0.505859V0.436401L20.6241 0.366943H20.5257Z" />
@@ -857,7 +1000,7 @@
                 </a>
 
                 <nav class="navbar">
-                    <a href="#home">Home</a>
+                    <a href="../index.php">Home</a>
                     <a href="./about.php">About</a>
                     <a href="./working.php">How It Works</a>
                     <a href="./service.php">services</a>
@@ -872,285 +1015,129 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- FAQs Content -->
+    <section class="faqs-page">
         <div class="container">
-            <div class="hero-content">
-                <h1>Create Professional <span>Invoices</span> in Seconds</h1>
-                <p>Invoice Simple helps freelancers and small businesses create beautiful, professional invoices with
-                    ease. No design skills required.</p>
-                <a href="./invoice.php" class="cta-btn">
-                    <i class="fas fa-bolt"></i>Generate Invoice Now
-                </a>
-            </div>
-        </div>
-
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=1000" alt="Invoice Example">
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Powerful Features</h2>
-                <p>Everything you need to create professional invoices and get paid faster</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-invoice"></i>
-                    </div>
-                    <h3>Custom Templates</h3>
-                    <p>Choose from professionally designed templates that match your brand identity.</p>
+            <div class="faqs-container">
+                <div class="faqs-title">
+                    <h1>Frequently Asked Questions</h1>
+                    <p>Find answers to common questions about Invoice Simple</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3>Auto Calculations</h3>
-                    <p>Automatic tax calculations, discounts, and totals save you time and reduce errors.</p>
+                <div class="search-box">
+                    <input type="text" placeholder="Search for questions or topics...">
+                    <i class="fas fa-search"></i>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                <div class="faq-category">
+                    <h2>Getting Started</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I create an account?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Creating an account is simple! Click on the "Sign Up" button in the top right corner of any page. You can sign up using your email address or through Google. Once registered, you'll have access to all features.</p>
+                        </div>
                     </div>
-                    <h3>Mobile Friendly</h3>
-                    <p>Create and send invoices from any device - desktop, tablet or mobile.</p>
-                </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock-open"></i>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Is there a free version?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We offer a free plan that allows you to create up to 5 invoices per month with basic features. If you need more invoices or advanced features, you can upgrade to one of our paid plans.</p>
+                        </div>
                     </div>
-                    <h3>No Login Needed</h3>
-                    <p>Start creating invoices instantly without signing up or logging in.</p>
-                </div>
 
-                <div class=" feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-paper-plane"></i>
-                    </div>
-                    <h3>Email Integration</h3>
-                    <p>Send invoices directly to clients via email with just one click.</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Real-Time Preview</h3>
-                    <p>See live updates of your invoice while you edit—what you see is what you get.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <div class="section-title">
-                <h2>How It Works</h2>
-                <p>Create professional invoices in just three simple steps</p>
-            </div>
-
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <i class="fas fa-user-edit"></i>
-                    </div>
-                    <h3>Enter Details</h3>
-                    <p>Fill in your business and client information. Add your logo and customize the design.</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <i class="fas fa-list"></i>
-                    </div>
-                    <h3>Add Line Items</h3>
-                    <p>List your products or services, quantities, rates, and any applicable taxes or discounts.</p>
-                </div>
-
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <i class="fas fa-file-download"></i>
-                    </div>
-                    <h3>Download or Send</h3>
-                    <p>Preview your invoice and download as PDF or send directly to your client via email.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Our Users Say</h2>
-                <p>Thousands of freelancers and small businesses trust Invoice Simple</p>
-            </div>
-
-            <div class="testimonials-container">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        "Invoice Simple has saved me countless hours. As a freelance designer, creating professional
-                        invoices used to take me 15-20 minutes per client. Now it takes less than 2 minutes!"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">S</div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Freelance Graphic Designer</p>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do I need to download any software?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No, Invoice Simple is completely web-based. You can access it from any browser on your computer, tablet, or smartphone. There's nothing to download or install.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        "The automatic calculations have eliminated so many errors in my invoicing. I no longer worry
-                        about tax calculations or forgetting to apply discounts. Plus, my clients love how professional
-                        the invoices look."
+                <div class="faq-category">
+                    <h2>Billing & Payments</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What payment methods do you accept?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We accept all major credit cards including Visa, Mastercard, American Express, and Discover. We also accept payments through PayPal.</p>
+                        </div>
                     </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
-                        <div class="author-info">
-                            <h4>Michael Torres</h4>
-                            <p>Small Business Owner</p>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I change my subscription plan?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can upgrade or downgrade your plan at any time from your account settings. Changes will take effect immediately, and you'll be charged or credited a prorated amount.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I cancel my subscription?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can cancel your subscription at any time from your account settings. Navigate to the "Billing" section and select "Cancel Subscription." Your access to premium features will continue until the end of your current billing period.</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-title">
-                <h2>Simple Pricing</h2>
-                <p>Choose the plan that works best for your business</p>
-            </div>
+                <div class="faq-category">
+                    <h2>Features & Usage</h2>
 
-            <div class="pricing-plans">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Starter</h3>
-                        <div class="pricing-price">$0</div>
-                        <div class="pricing-period">Forever Free</div>
-                    </div>
-
-                    <div class="pricing-features">
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>5 invoices per month</span>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I add my company logo?
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Basic templates</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>PDF download</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-times"></i>
-                            <span>Email sending</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-times"></i>
-                            <span>Payment integrations</span>
+                        <div class="faq-answer">
+                            <p>To add your company logo, go to "Account Settings" and then "Branding." Click on "Upload Logo" and select your logo file. We recommend using a high-quality PNG file with a transparent background.</p>
                         </div>
                     </div>
 
-                    <a href="#" class="pricing-btn">Get Started</a>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I customize invoice templates?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We offer multiple professional templates that you can customize. You can change colors to match your brand, modify layout sections, and add custom fields. Premium subscribers get access to more customization options.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I set up automatic payment reminders?
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Automatic payment reminders are available in our Professional and Business plans. Go to "Settings" > "Reminders" to configure when reminders should be sent. You can customize the message and frequency.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="pricing-card popular">
-                    <div class="popular-badge">POPULAR</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Professional</h3>
-                        <div class="pricing-price">$9</div>
-                        <div class="pricing-period">per month</div>
-                    </div>
-
-                    <div class="pricing-features">
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Unlimited invoices</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Premium templates</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>PDF download</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Email sending</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Payment integrations</span>
-                        </div>
-                    </div>
-
-                    <a href="#" class="pricing-btn">Get Started</a>
+                <div class="contact-faq">
+                    <h3>Still have questions?</h3>
+                    <p>Our support team is available to answer any additional questions you may have.</p>
+                    <a href="contact.php" class="contact-btn">
+                        <i class="fas fa-headset"></i> Contact Support
+                    </a>
                 </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Business</h3>
-                        <div class="pricing-price">$29</div>
-                        <div class="pricing-period">per month</div>
-                    </div>
-
-                    <div class="pricing-features">
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Unlimited invoices</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Premium templates</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Custom branding</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Team collaboration</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Advanced reporting</span>
-                        </div>
-                    </div>
-
-                    <a href="#" class="pricing-btn">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <section class="cta-banner">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Create Professional Invoices?</h2>
-                <p>Join thousands of satisfied users who have streamlined their billing process with Invoice Simple</p>
-                <a href="./invoice.php" class="cta-button">
-                    <i class="fas fa-bolt"></i>Start Creating Invoices Now
-                </a>
             </div>
         </div>
     </section>
@@ -1215,19 +1202,30 @@
         </div>
     </footer>
 
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = question.classList.contains('active');
+
+                // Toggle current item
+                question.classList.toggle('active');
+                answer.classList.toggle('show');
+
+                // Close other items in the same category
+                const category = question.closest('.faq-category');
+                category.querySelectorAll('.faq-question').forEach(q => {
+                    if (q !== question) {
+                        q.classList.remove('active');
+                        q.nextElementSibling.classList.remove('show');
+                    }
                 });
             });
         });
 
-        // Header scroll effect
+        // Header scroll effect (same as index.php)
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
@@ -1237,21 +1235,6 @@
                 header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
                 header.style.background = 'white';
             }
-        });
-
-        // Animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        });
-
-        const hiddenElements = document.querySelectorAll('.feature-card, .step, .testimonial, .pricing-card');
-        hiddenElements.forEach((el) => {
-            el.classList.add('hidden');
-            observer.observe(el);
         });
     </script>
 </body>

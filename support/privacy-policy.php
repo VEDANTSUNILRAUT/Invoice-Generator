@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invoice Simple | Professional Invoice Generator</title>
+    <title>Privacy Policy | Invoice Simple</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
@@ -840,6 +840,93 @@
                 justify-content: center;
             }
         }
+
+        /* New styles for Privacy Policy */
+        .privacy-page {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .privacy-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .privacy-title h1 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .privacy-title p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .last-updated {
+            text-align: center;
+            margin-bottom: 40px;
+            font-style: italic;
+            color: var(--gray);
+        }
+
+        .privacy-content {
+            background: #f9fbfd;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .privacy-section {
+            margin-bottom: 40px;
+        }
+
+        .privacy-section h2 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(67, 97, 238, 0.2);
+        }
+
+        .privacy-section h3 {
+            font-size: 1.4rem;
+            color: var(--dark);
+            margin: 25px 0 15px;
+        }
+
+        .privacy-section p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .privacy-section ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .privacy-section li {
+            margin-bottom: 10px;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .contact-privacy {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .contact-privacy p {
+            color: var(--dark);
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -848,7 +935,7 @@
     <header>
         <div class="container">
             <div class="header-container">
-                <a href="#" class="logo">
+                <a href="index.php" class="logo">
                     <svg width="24" height="24" viewBox="0 0 21 19" fill="white" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M20.5257 0.366943L9.18097 10.1489L8.86262 10.3805L8.70634 10.4673L8.60794 10.502L8.49218 10.5425L8.4343 10.5599L8.36484 10.5715L8.27802 10.5772H8.11595H7.91915L7.82075 10.5715L7.73393 10.5599L7.6529 10.5425L7.58923 10.5252L0.730264 7.89154L0.579773 7.85681L0.504526 7.87997L0.429281 7.95521L0.406128 8.00731V8.07676L0.429281 8.18674L0.730264 8.57455L7.78602 18.3392L7.86127 18.4028L7.95388 18.4781L8.09858 18.5186L8.2375 18.5244L8.3822 18.4897L8.50954 18.4144L8.60794 18.3218L8.74107 18.1771L20.6589 0.505859V0.436401L20.6241 0.366943H20.5257Z" />
@@ -857,7 +944,7 @@
                 </a>
 
                 <nav class="navbar">
-                    <a href="#home">Home</a>
+                    <a href="../index.php">Home</a>
                     <a href="./about.php">About</a>
                     <a href="./working.php">How It Works</a>
                     <a href="./service.php">services</a>
@@ -872,285 +959,124 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <!-- Privacy Policy Content -->
+    <section class="privacy-page">
         <div class="container">
-            <div class="hero-content">
-                <h1>Create Professional <span>Invoices</span> in Seconds</h1>
-                <p>Invoice Simple helps freelancers and small businesses create beautiful, professional invoices with
-                    ease. No design skills required.</p>
-                <a href="./invoice.php" class="cta-btn">
-                    <i class="fas fa-bolt"></i>Generate Invoice Now
-                </a>
-            </div>
-        </div>
-
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=1000" alt="Invoice Example">
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Powerful Features</h2>
-                <p>Everything you need to create professional invoices and get paid faster</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-file-invoice"></i>
-                    </div>
-                    <h3>Custom Templates</h3>
-                    <p>Choose from professionally designed templates that match your brand identity.</p>
+            <div class="privacy-container">
+                <div class="privacy-title">
+                    <h1>Privacy Policy</h1>
+                    <p>Last Updated: June 11, 2025</p>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-calculator"></i>
-                    </div>
-                    <h3>Auto Calculations</h3>
-                    <p>Automatic tax calculations, discounts, and totals save you time and reduce errors.</p>
+                <div class="last-updated">
+                    This Privacy Policy explains how Invoice Simple collects, uses, and discloses your personal information.
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                <div class="privacy-content">
+                    <div class="privacy-section">
+                        <h2>1. Introduction</h2>
+                        <p>Invoice Simple ("we," "us," or "our") respects your privacy and is committed to protecting it through our compliance with this policy. This policy describes the types of information we may collect from you or that you may provide when you use our website and services (collectively, "Services") and our practices for collecting, using, maintaining, protecting, and disclosing that information.</p>
                     </div>
-                    <h3>Mobile Friendly</h3>
-                    <p>Create and send invoices from any device - desktop, tablet or mobile.</p>
-                </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock-open"></i>
+                    <div class="privacy-section">
+                        <h2>2. Information We Collect</h2>
+                        <p>We collect several types of information from and about users of our Services:</p>
+
+                        <h3>2.1 Personal Information</h3>
+                        <p>When you register for an account or use our Services, we may collect:</p>
+                        <ul>
+                            <li>Name, email address, and contact information</li>
+                            <li>Business name, address, and tax identification numbers</li>
+                            <li>Billing and payment information</li>
+                            <li>Client information you provide in invoices</li>
+                        </ul>
+
+                        <h3>2.2 Usage Data</h3>
+                        <p>We automatically collect information about your interaction with our Services:</p>
+                        <ul>
+                            <li>Log and device information (IP address, browser type, operating system)</li>
+                            <li>Usage details (pages visited, features used, time spent)</li>
+                            <li>Cookies and similar tracking technologies</li>
+                        </ul>
                     </div>
-                    <h3>No Login Needed</h3>
-                    <p>Start creating invoices instantly without signing up or logging in.</p>
-                </div>
 
-                <div class=" feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-paper-plane"></i>
+                    <div class="privacy-section">
+                        <h2>3. How We Use Your Information</h2>
+                        <p>We use the information we collect for various purposes:</p>
+                        <ul>
+                            <li>To provide, maintain, and improve our Services</li>
+                            <li>To process transactions and send invoices</li>
+                            <li>To communicate with you about your account and our Services</li>
+                            <li>To personalize your experience and provide customer support</li>
+                            <li>To detect, prevent, and address technical issues or fraud</li>
+                            <li>To comply with legal obligations and enforce our terms</li>
+                        </ul>
                     </div>
-                    <h3>Email Integration</h3>
-                    <p>Send invoices directly to clients via email with just one click.</p>
-                </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-eye"></i>
+                    <div class="privacy-section">
+                        <h2>4. How We Share Your Information</h2>
+                        <p>We may share your information in the following situations:</p>
+
+                        <h3>4.1 With Your Consent</h3>
+                        <p>We may share your information when you give us explicit permission to do so.</p>
+
+                        <h3>4.2 Service Providers</h3>
+                        <p>We may share information with third-party vendors who perform services on our behalf, such as payment processing, data analysis, email delivery, and hosting services.</p>
+
+                        <h3>4.3 Legal Requirements</h3>
+                        <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities.</p>
+
+                        <h3>4.4 Business Transfers</h3>
+                        <p>In connection with any merger, sale of company assets, or acquisition, your information may be transferred as a business asset.</p>
                     </div>
-                    <h3>Real-Time Preview</h3>
-                    <p>See live updates of your invoice while you edit—what you see is what you get.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works" id="how-it-works">
-        <div class="container">
-            <div class="section-title">
-                <h2>How It Works</h2>
-                <p>Create professional invoices in just three simple steps</p>
-            </div>
-
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <i class="fas fa-user-edit"></i>
+                    <div class="privacy-section">
+                        <h2>5. Data Security</h2>
+                        <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+                        <ul>
+                            <li>Encryption of data in transit and at rest</li>
+                            <li>Regular security assessments and testing</li>
+                            <li>Access controls to personal information</li>
+                            <li>Security incident response procedures</li>
+                        </ul>
+                        <p>While we strive to protect your personal information, no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
                     </div>
-                    <h3>Enter Details</h3>
-                    <p>Fill in your business and client information. Add your logo and customize the design.</p>
-                </div>
 
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <i class="fas fa-list"></i>
+                    <div class="privacy-section">
+                        <h2>6. Your Privacy Rights</h2>
+                        <p>Depending on your location, you may have certain rights regarding your personal information:</p>
+                        <ul>
+                            <li><strong>Access:</strong> Request access to your personal information</li>
+                            <li><strong>Correction:</strong> Request correction of inaccurate information</li>
+                            <li><strong>Deletion:</strong> Request deletion of your personal information</li>
+                            <li><strong>Objection:</strong> Object to processing of your personal information</li>
+                            <li><strong>Portability:</strong> Request transfer of your data to another service</li>
+                        </ul>
+                        <p>To exercise these rights, please contact us using the information below.</p>
                     </div>
-                    <h3>Add Line Items</h3>
-                    <p>List your products or services, quantities, rates, and any applicable taxes or discounts.</p>
-                </div>
 
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <i class="fas fa-file-download"></i>
+                    <div class="privacy-section">
+                        <h2>7. Data Retention</h2>
+                        <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. When determining retention periods, we consider:</p>
+                        <ul>
+                            <li>The nature of the personal information</li>
+                            <li>The purposes for which we process it</li>
+                            <li>Legal obligations for retaining data</li>
+                        </ul>
                     </div>
-                    <h3>Download or Send</h3>
-                    <p>Preview your invoice and download as PDF or send directly to your client via email.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Testimonials -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>What Our Users Say</h2>
-                <p>Thousands of freelancers and small businesses trust Invoice Simple</p>
-            </div>
+                    <div class="privacy-section">
+                        <h2>8. Changes to This Policy</h2>
+                        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We will also provide notice via email for significant changes.</p>
+                    </div>
 
-            <div class="testimonials-container">
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        "Invoice Simple has saved me countless hours. As a freelance designer, creating professional
-                        invoices used to take me 15-20 minutes per client. Now it takes less than 2 minutes!"
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">S</div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Freelance Graphic Designer</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        "The automatic calculations have eliminated so many errors in my invoicing. I no longer worry
-                        about tax calculations or forgetting to apply discounts. Plus, my clients love how professional
-                        the invoices look."
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">M</div>
-                        <div class="author-info">
-                            <h4>Michael Torres</h4>
-                            <p>Small Business Owner</p>
-                        </div>
+                    <div class="contact-privacy">
+                        <h2>9. Contact Us</h2>
+                        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                        <p>Email: privacy@invoicesimple.com</p>
+                        <p>Address: Amravati, Maharashtra, India</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-title">
-                <h2>Simple Pricing</h2>
-                <p>Choose the plan that works best for your business</p>
-            </div>
-
-            <div class="pricing-plans">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Starter</h3>
-                        <div class="pricing-price">$0</div>
-                        <div class="pricing-period">Forever Free</div>
-                    </div>
-
-                    <div class="pricing-features">
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>5 invoices per month</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Basic templates</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>PDF download</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-times"></i>
-                            <span>Email sending</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-times"></i>
-                            <span>Payment integrations</span>
-                        </div>
-                    </div>
-
-                    <a href="#" class="pricing-btn">Get Started</a>
-                </div>
-
-                <div class="pricing-card popular">
-                    <div class="popular-badge">POPULAR</div>
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Professional</h3>
-                        <div class="pricing-price">$9</div>
-                        <div class="pricing-period">per month</div>
-                    </div>
-
-                    <div class="pricing-features">
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Unlimited invoices</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Premium templates</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>PDF download</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Email sending</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Payment integrations</span>
-                        </div>
-                    </div>
-
-                    <a href="#" class="pricing-btn">Get Started</a>
-                </div>
-
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3 class="pricing-name">Business</h3>
-                        <div class="pricing-price">$29</div>
-                        <div class="pricing-period">per month</div>
-                    </div>
-
-                    <div class="pricing-features">
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Unlimited invoices</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Premium templates</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Custom branding</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Team collaboration</span>
-                        </div>
-                        <div class="pricing-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Advanced reporting</span>
-                        </div>
-                    </div>
-
-                    <a href="#" class="pricing-btn">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <section class="cta-banner">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Create Professional Invoices?</h2>
-                <p>Join thousands of satisfied users who have streamlined their billing process with Invoice Simple</p>
-                <a href="./invoice.php" class="cta-button">
-                    <i class="fas fa-bolt"></i>Start Creating Invoices Now
-                </a>
             </div>
         </div>
     </section>
@@ -1215,19 +1141,9 @@
         </div>
     </footer>
 
+
     <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Header scroll effect
+        // Header scroll effect (same as index.php)
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
@@ -1237,21 +1153,6 @@
                 header.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
                 header.style.background = 'white';
             }
-        });
-
-        // Animation on scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        });
-
-        const hiddenElements = document.querySelectorAll('.feature-card, .step, .testimonial, .pricing-card');
-        hiddenElements.forEach((el) => {
-            el.classList.add('hidden');
-            observer.observe(el);
         });
     </script>
 </body>
