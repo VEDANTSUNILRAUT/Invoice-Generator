@@ -157,14 +157,19 @@ function selectCurrency(code, symbol, countryCode) {
   };
 
   const left = document.querySelector(".selected-left");
-  const rightSymbol = document.querySelector(
-    ".selected-right span:first-child"
-  );
-  const flagEl = document.querySelector(".selected-right .fi");
+  const right = document.querySelector(".selected-right");
 
   if (left) left.textContent = code;
-  if (rightSymbol) rightSymbol.textContent = symbol;
-  if (flagEl) flagEl.className = `fi fi-${countryCode}`;
+
+  if (right) {
+    right.innerHTML = `
+      <span>${symbol}</span>
+      <span class="fi fi-${countryCode}"></span>
+    `;
+  }
+
+  document.getElementById("currency_code").value = code;
+  document.getElementById("currency_symbol").value = symbol;
 
   document.getElementById("currencyDropdown")?.classList.remove("show");
   updateAllAmounts();

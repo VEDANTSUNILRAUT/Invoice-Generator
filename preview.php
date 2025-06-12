@@ -250,12 +250,14 @@ function formatCurrency($amount, $symbol)
             margin-bottom: 30px;
         }
 
-        .notes h3,
+        <?php
+        $selectedColor = isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#6a1b9a';
+        ?>.notes h3,
         .signature-section h3,
         .photos-section h3 {
             font-size: 16px;
             margin-bottom: 10px;
-            color: #6a1b9a;
+            color: <?php echo $selectedColor; ?>;
         }
 
         .notes p {
@@ -293,7 +295,7 @@ function formatCurrency($amount, $symbol)
 
         .button {
             padding: 10px 20px;
-            background-color: #6a1b9a;
+            background-color: <?php echo $selectedColor; ?>;
             color: white;
             border: none;
             border-radius: 5px;
@@ -346,15 +348,20 @@ function formatCurrency($amount, $symbol)
  margin: 20mm auto 0 auto;">
         <div class="invoice-container">
             <div class="header">
-                <h1><?php echo isset($_POST['invoice_title']) ? htmlspecialchars($_POST['invoice_title']) : 'Invoice'; ?></h1>
+                <h1 style="color: <?php echo isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#ffffff'; ?>">
+                    <?php echo isset($_POST['invoice_title']) ? htmlspecialchars($_POST['invoice_title']) : 'Invoice'; ?>
+                </h1>
+
                 <?php if (!empty($logoPath)): ?>
                     <img src="<?php echo $logoPath; ?>" alt="Logo" class="logo">
                 <?php endif; ?>
             </div>
 
+
             <div class="info-section">
                 <div class="info-box">
-                    <h3>From</h3>
+                    <h3 style="color: <?php echo isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#000000'; ?>">From</h3>
+
                     <p><strong><?php echo isset($_POST['from_name']) ? htmlspecialchars($_POST['from_name']) : ''; ?></strong></p>
                     <p><?php echo isset($_POST['from_email']) ? htmlspecialchars($_POST['from_email']) : ''; ?></p>
                     <p><?php echo isset($_POST['from_address']) ? htmlspecialchars($_POST['from_address']) : ''; ?></p>
@@ -363,7 +370,8 @@ function formatCurrency($amount, $symbol)
                 </div>
 
                 <div class="info-box">
-                    <h3>Bill To</h3>
+                    <h3 style="color: <?php echo isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#000000'; ?>">Bill To</h3>
+
                     <p><strong><?php echo isset($_POST['bill_name']) ? htmlspecialchars($_POST['bill_name']) : ''; ?></strong></p>
                     <p><?php echo isset($_POST['bill_email']) ? htmlspecialchars($_POST['bill_email']) : ''; ?></p>
                     <p><?php echo isset($_POST['bill_address']) ? htmlspecialchars($_POST['bill_address']) : ''; ?></p>
@@ -395,13 +403,15 @@ function formatCurrency($amount, $symbol)
             <table class="items-table">
                 <thead>
                     <tr>
-                        <th style="width: 35%;">Description</th>
-                        <th style="width: 35%;">Details</th>
-                        <th style="width: 10%;">Rate</th>
-                        <th style="width: 10%;">Qty</th>
-                        <th style="width: 10%;">Amount</th>
+                        <?php $bgColor = isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#3063ba'; ?>
+                        <th style="width: 35%; background-color: <?php echo $bgColor; ?>; color: #fff;">Description</th>
+                        <th style="width: 35%; background-color: <?php echo $bgColor; ?>; color: #fff;">Details</th>
+                        <th style="width: 10%; background-color: <?php echo $bgColor; ?>; color: #fff;">Rate</th>
+                        <th style="width: 10%; background-color: <?php echo $bgColor; ?>; color: #fff;">Qty</th>
+                        <th style="width: 10%; background-color: <?php echo $bgColor; ?>; color: #fff;">Amount</th>
                     </tr>
                 </thead>
+
                 <tbody>
                     <?php foreach ($items as $item): ?>
                         <tr>

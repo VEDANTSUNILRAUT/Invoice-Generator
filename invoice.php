@@ -267,7 +267,7 @@ if (isset($_FILES["photo"]) && $_FILES["photo"]["error"] === UPLOAD_ERR_OK) {
                             <!-- section seven -->
                             <div class="lb-seven">
                                 <h3>Notes</h3>
-                                <textarea placeholder="Notes - any relevant information not covered, additional terms and conditions"></textarea>
+                                <textarea name="notes" placeholder="Notes - any relevant information not covered, additional terms and conditions"></textarea>
                             </div>
                             <!-- section eight -->
                             <div class="lb-eight">
@@ -290,6 +290,9 @@ if (isset($_FILES["photo"]) && $_FILES["photo"]["error"] === UPLOAD_ERR_OK) {
 
                             <!-- Hidden field to hold signature image -->
                             <input type="hidden" name="signature_data" id="signatureData">
+                            <!-- Add these inside the form in invoice.php -->
+                            <input type="hidden" name="currency_code" id="currency_code" value="INR">
+                            <input type="hidden" name="currency_symbol" id="currency_symbol" value="₹">
 
                             <!-- Photos Section -->
                             <div class="lb-nine">
