@@ -339,150 +339,180 @@ function formatCurrency($amount, $symbol)
                 transform: rotate(360deg);
             }
         }
+
+        @media print {
+            #content-to-zoom {
+                transform: scale(0.3);
+                transform-origin: top left;
+            }
+
+            #zoom-controls {
+                display: none;
+            }
+        }
+
+        @media print {
+            #content-to-zoom {
+                transform: scale(0.3);
+                transform-origin: top left;
+            }
+
+            #zoom-controls {
+                display: none;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div id="invoice" style=" width: 210mm;
-  height: auto;
- margin: 20mm auto 0 auto;">
-        <div class="invoice-container">
-            <div class="header">
-                <h1 style="color: <?php echo isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#ffffff'; ?>">
-                    <?php echo isset($_POST['invoice_title']) ? htmlspecialchars($_POST['invoice_title']) : 'Invoice'; ?>
-                </h1>
+    <div class="invoice-container" id="invoice">
+        <div class="header">
+            <h1 style="color: <?php echo isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#ffffff'; ?>">
+                <?php echo isset($_POST['invoice_title']) ? htmlspecialchars($_POST['invoice_title']) : 'Invoice'; ?>
+            </h1>
 
-                <?php if (!empty($logoPath)): ?>
-                    <img src="<?php echo $logoPath; ?>" alt="Logo" class="logo">
+            <?php if (!empty($logoPath)): ?>
+                <img src="<?php echo $logoPath; ?>" alt="Logo" class="logo">
+            <?php endif; ?>
+        </div>
+
+
+        <div class="info-section">
+            <div class="info-box">
+                <h3 style="color: <?php echo isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#000000'; ?>">From</h3>
+
+                <p><strong><?php echo isset($_POST['from_name']) ? htmlspecialchars($_POST['from_name']) : ''; ?></strong></p>
+                <p><?php echo isset($_POST['from_email']) ? htmlspecialchars($_POST['from_email']) : ''; ?></p>
+                <p><?php echo isset($_POST['from_address']) ? htmlspecialchars($_POST['from_address']) : ''; ?></p>
+                <p><?php echo isset($_POST['from_phone']) ? htmlspecialchars($_POST['from_phone']) : ''; ?></p>
+                <p>Business #: <?php echo isset($_POST['from_business_number']) ? htmlspecialchars($_POST['from_business_number']) : ''; ?></p>
+            </div>
+
+            <div class="info-box">
+                <h3 style="color: <?php echo isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#000000'; ?>">Bill To</h3>
+
+                <p><strong><?php echo isset($_POST['bill_name']) ? htmlspecialchars($_POST['bill_name']) : ''; ?></strong></p>
+                <p><?php echo isset($_POST['bill_email']) ? htmlspecialchars($_POST['bill_email']) : ''; ?></p>
+                <p><?php echo isset($_POST['bill_address']) ? htmlspecialchars($_POST['bill_address']) : ''; ?></p>
+                <p><?php echo isset($_POST['bill_phone']) ? htmlspecialchars($_POST['bill_phone']) : ''; ?></p>
+                <?php if (!empty($_POST['bill_mobile'])): ?>
+                    <p>Mobile: <?php echo htmlspecialchars($_POST['bill_mobile']); ?></p>
+                <?php endif; ?>
+                <?php if (!empty($_POST['bill_fax'])): ?>
+                    <p>Fax: <?php echo htmlspecialchars($_POST['bill_fax']); ?></p>
                 <?php endif; ?>
             </div>
+        </div>
 
-
-            <div class="info-section">
-                <div class="info-box">
-                    <h3 style="color: <?php echo isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#000000'; ?>">From</h3>
-
-                    <p><strong><?php echo isset($_POST['from_name']) ? htmlspecialchars($_POST['from_name']) : ''; ?></strong></p>
-                    <p><?php echo isset($_POST['from_email']) ? htmlspecialchars($_POST['from_email']) : ''; ?></p>
-                    <p><?php echo isset($_POST['from_address']) ? htmlspecialchars($_POST['from_address']) : ''; ?></p>
-                    <p><?php echo isset($_POST['from_phone']) ? htmlspecialchars($_POST['from_phone']) : ''; ?></p>
-                    <p>Business #: <?php echo isset($_POST['from_business_number']) ? htmlspecialchars($_POST['from_business_number']) : ''; ?></p>
-                </div>
-
-                <div class="info-box">
-                    <h3 style="color: <?php echo isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#000000'; ?>">Bill To</h3>
-
-                    <p><strong><?php echo isset($_POST['bill_name']) ? htmlspecialchars($_POST['bill_name']) : ''; ?></strong></p>
-                    <p><?php echo isset($_POST['bill_email']) ? htmlspecialchars($_POST['bill_email']) : ''; ?></p>
-                    <p><?php echo isset($_POST['bill_address']) ? htmlspecialchars($_POST['bill_address']) : ''; ?></p>
-                    <p><?php echo isset($_POST['bill_phone']) ? htmlspecialchars($_POST['bill_phone']) : ''; ?></p>
-                    <?php if (!empty($_POST['bill_mobile'])): ?>
-                        <p>Mobile: <?php echo htmlspecialchars($_POST['bill_mobile']); ?></p>
-                    <?php endif; ?>
-                    <?php if (!empty($_POST['bill_fax'])): ?>
-                        <p>Fax: <?php echo htmlspecialchars($_POST['bill_fax']); ?></p>
-                    <?php endif; ?>
-                </div>
+        <div class="invoice-details">
+            <div class="detail-item">
+                <span class="label">Invoice Number</span>
+                <span class="value"><?php echo isset($_POST['invoice_number']) ? htmlspecialchars($_POST['invoice_number']) : ''; ?></span>
             </div>
-
-            <div class="invoice-details">
-                <div class="detail-item">
-                    <span class="label">Invoice Number</span>
-                    <span class="value"><?php echo isset($_POST['invoice_number']) ? htmlspecialchars($_POST['invoice_number']) : ''; ?></span>
-                </div>
-                <div class="detail-item">
-                    <span class="label">Invoice Date</span>
-                    <span class="value"><?php echo isset($_POST['invoice_date']) ? htmlspecialchars($_POST['invoice_date']) : date('Y-m-d'); ?></span>
-                </div>
-                <div class="detail-item">
-                    <span class="label">Payment Terms</span>
-                    <span class="value"><?php echo isset($_POST['invoice_terms']) ? htmlspecialchars($_POST['invoice_terms']) : 'On Receipt'; ?></span>
-                </div>
+            <div class="detail-item">
+                <span class="label">Invoice Date</span>
+                <span class="value"><?php echo isset($_POST['invoice_date']) ? htmlspecialchars($_POST['invoice_date']) : date('Y-m-d'); ?></span>
             </div>
+            <div class="detail-item">
+                <span class="label">Payment Terms</span>
+                <span class="value"><?php echo isset($_POST['invoice_terms']) ? htmlspecialchars($_POST['invoice_terms']) : 'On Receipt'; ?></span>
+            </div>
+        </div>
 
-            <table class="items-table">
-                <thead>
+        <table class="items-table">
+            <thead>
+                <tr>
+                    <?php $bgColor = isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#3063ba'; ?>
+                    <th style="width: 35%; background-color: <?php echo $bgColor; ?>; color: #fff;">Description</th>
+                    <th style="width: 35%; background-color: <?php echo $bgColor; ?>; color: #fff;">Details</th>
+                    <th style="width: 10%; background-color: <?php echo $bgColor; ?>; color: #fff;">Rate</th>
+                    <th style="width: 10%; background-color: <?php echo $bgColor; ?>; color: #fff;">Qty</th>
+                    <th style="width: 10%; background-color: <?php echo $bgColor; ?>; color: #fff;">Amount</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php foreach ($items as $item): ?>
                     <tr>
-                        <?php $bgColor = isset($_POST['selected_color']) ? htmlspecialchars($_POST['selected_color']) : '#3063ba'; ?>
-                        <th style="width: 35%; background-color: <?php echo $bgColor; ?>; color: #fff;">Description</th>
-                        <th style="width: 35%; background-color: <?php echo $bgColor; ?>; color: #fff;">Details</th>
-                        <th style="width: 10%; background-color: <?php echo $bgColor; ?>; color: #fff;">Rate</th>
-                        <th style="width: 10%; background-color: <?php echo $bgColor; ?>; color: #fff;">Qty</th>
-                        <th style="width: 10%; background-color: <?php echo $bgColor; ?>; color: #fff;">Amount</th>
+                        <td><?= $item['desc'] ?></td>
+                        <td><?= $item['detail'] ?></td>
+                        <td><?= number_format($item['rate'], 2) ?></td>
+                        <td><?= $item['qty'] ?></td>
+                        <td><?= number_format($item['amount'], 2) ?></td>
                     </tr>
-                </thead>
+                <?php endforeach; ?>
 
-                <tbody>
-                    <?php foreach ($items as $item): ?>
-                        <tr>
-                            <td><?= $item['desc'] ?></td>
-                            <td><?= $item['detail'] ?></td>
-                            <td><?= number_format($item['rate'], 2) ?></td>
-                            <td><?= $item['qty'] ?></td>
-                            <td><?= number_format($item['amount'], 2) ?></td>
-                        </tr>
-                    <?php endforeach; ?>
+            </tbody>
+        </table>
+        <div class="totals">
+            <table class="totals-table">
 
-                </tbody>
+
+                <tr>
+                    <td class="label">Subtotal :</td>
+                    <td>₹<?= number_format($subtotal, 2) ?></td>
+
+                </tr>
+
+                <tr>
+                    <td class="label">Discount :</td>
+                    <td>₹<?= number_format($discount, 2) ?></td>
+                </tr>
+
+                <tr>
+                    <td class="label">Tax :</td>
+                    <td>₹<?= number_format($tax, 2) ?></td>
+                </tr>
+
+                <tr class="summary">
+                    <td>Total:</td>
+                    <td>₹<?= number_format($total, 2) ?></td>
+                </tr>
+
             </table>
-            <div class="totals">
-                <table class="totals-table">
+        </div>
 
-
-                    <tr>
-                        <td class="label">Subtotal :</td>
-                        <td>₹<?= number_format($subtotal, 2) ?></td>
-
-                    </tr>
-
-                    <tr>
-                        <td class="label">Discount :</td>
-                        <td>₹<?= number_format($discount, 2) ?></td>
-                    </tr>
-
-                    <tr>
-                        <td class="label">Tax :</td>
-                        <td>₹<?= number_format($tax, 2) ?></td>
-                    </tr>
-
-                    <tr class="summary">
-                        <td>Total:</td>
-                        <td>₹<?= number_format($total, 2) ?></td>
-                    </tr>
-
-                </table>
+        <?php if (!empty($_POST['notes'])): ?>
+            <div class="notes">
+                <h3>Notes</h3>
+                <p><?php echo nl2br(htmlspecialchars($_POST['notes'])); ?></p>
             </div>
+        <?php endif; ?>
 
-            <?php if (!empty($_POST['notes'])): ?>
-                <div class="notes">
-                    <h3>Notes</h3>
-                    <p><?php echo nl2br(htmlspecialchars($_POST['notes'])); ?></p>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <?php if (!empty($signaturePath)): ?>
+                <div class="signature-section">
+                    <h3>Signature</h3>
+                    <img src="<?php echo $signaturePath; ?>" alt="Signature" class="signature-img">
                 </div>
             <?php endif; ?>
 
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <?php if (!empty($signaturePath)): ?>
-                    <div class="signature-section">
-                        <h3>Signature</h3>
-                        <img src="<?php echo $signaturePath; ?>" alt="Signature" class="signature-img">
-                    </div>
-                <?php endif; ?>
-
-                <?php if (!empty($photoPath)): ?>
-                    <div class="photos-section" style="width: 150px; height: 150px;">
-                        <h3>Photos</h3>
-                        <img src="<?php echo $photoPath; ?>" alt="Photo" class="photo-img">
-                    </div>
-                <?php endif; ?>
-            </div>
-            <div class="footer">
-                <p>Thank you for your business!</p>
-            </div>
+            <?php if (!empty($photoPath)): ?>
+                <div class="photos-section" style="width: 150px; height: 150px;">
+                    <h3>Photos</h3>
+                    <img src="<?php echo $photoPath; ?>" alt="Photo" class="photo-img">
+                </div>
+            <?php endif; ?>
+        </div>
+        <div class="footer">
+            <p>Thank you for your business!</p>
         </div>
     </div>
+
     <div class="button-container">
-        <button onclick="downloadPDF()" class="button">Download PDF</button>
-        <a href="invoice.php" class="button">Back to Form</a>
+        <button onclick="window.print()" class="button no-print">Download PDF</button>
+        <a href="invoice.php" class="button no-print">Back to Form</a>
     </div>
     <div id="loader" style="display: none;">
         <div class="spinner"></div>
