@@ -1,4 +1,9 @@
-<?php
+<?php if (isset($_GET['error']) && $_GET['error'] == 1): ?>
+    <script>
+        alert("Please fill out the invoice form first.");
+    </script>
+<?php endif;
+
 // Always define your variables before using them
 $signaturePath = "";
 $photoPath = "";

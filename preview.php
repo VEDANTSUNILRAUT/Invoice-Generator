@@ -1,4 +1,9 @@
 <?php
+// Redirect if accessed directly without form submission
+if ($_SERVER["REQUEST_METHOD"] !== "POST" || empty($_POST['item_description'])) {
+    header("Location: invoice.php?error=1");
+    exit;
+}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $descriptions = $_POST['item_description'] ?? [];
